@@ -4,11 +4,18 @@
     --blue: #19a1ad;
     --blueTransparency: #19a1ad70;
     --darkBlue: #1D2F62;
+    --darkBlueTransparency: #1D2F6270;
 }
 
 html{
     margin: 0;
     padding: 0;
+}
+
+#cursor{
+    position: absolute;
+    width: 25px;
+    height: 25px;
 }
 
 h1{
@@ -29,6 +36,12 @@ body{
     width: 85vw;
     margin: auto;
     color: var(--darkBlue);
+
+    background-image: linear-gradient(
+        90deg,
+        #e7fffa,
+        #f6ffff
+    );
 }
 
 #bio{
@@ -46,6 +59,13 @@ body{
     max-width: 200px;
     max-height: 200px;
     margin-bottom: 25px;
+
+    /* EASTER EGG */       
+    transition:transform 2s;
+}
+
+.profile_picture:hover{
+    transform:rotate(360deg);
 }
 
 #bio_figure{
@@ -60,11 +80,16 @@ body{
 }
 
 .design, .other{
+    background-color: white;
+    position: relative;
     padding: 15px;
     padding-right: 25px;
     border-radius: 25px;
+
     width: 25vw;
-    box-shadow: 0px 0px 10px var(--blueTransparency);
+    height: 400px;
+
+    box-shadow: 0px 0px 10px var(--darkBlueTransparency);
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
@@ -72,9 +97,28 @@ body{
     text-align: center;
 }
 
+.design a, .other a{
+    display: none;
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    animation-name: linkSkid;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+
+.design:hover a, .other:hover a{
+    display: block;
+}
+
 .design:hover, .other:hover{
-    opacity: 0.7;
+    opacity: 0.85;
     cursor: pointer;
+}
+
+.aboutProject{
+    padding-bottom: 15px;
 }
 
 .preview{
@@ -97,23 +141,43 @@ li{
 }
 
 @media only screen and (min-width: 760px) and (max-width: 1024px) {
+    #cursor{
+        display: none!important;
+    }
     body{
         width: 85vw;
     }
     h1{
         text-align: center;
     }
+    .design a, .other a{
+        display: block;
+        position: relative;
+        left: 0%;
+        animation-iteration-count: 0;
+    }
     .design, .other{
         width: 40vw;
+        height: auto;
     }
 }
 
 @media only screen and (max-width: 760px) {
+    #cursor{
+        display: none!important;
+    }
     #designs, #others{
         flex-direction: column;
     }
+    .design a, .other a{
+        display: block;
+        position: relative;
+        left: 0%;
+        animation-iteration-count: 0;
+    }
     .design, .other{
         width: 75vw;
+        height: auto;
     }
     .preview{
         width: 50vw;
@@ -141,5 +205,16 @@ li{
     #socialMedia{
         padding: 0;
         justify-content: space-around;
+    }
+}
+
+/* KEYFRAMES */
+
+@keyframes linkSkid {
+    0% {
+        left: 0%;
+    }
+    50%{
+        left: 50%;
     }
 }
