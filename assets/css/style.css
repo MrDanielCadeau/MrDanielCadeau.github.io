@@ -141,6 +141,9 @@ li{
 }
 
 @media only screen and (min-width: 760px) and (max-width: 1024px) {
+    header{
+        display: none;
+    }
     #cursor{
         display: none!important;
     }
@@ -163,6 +166,9 @@ li{
 }
 
 @media only screen and (max-width: 760px) {
+    header{
+        display: none;
+    }
     #cursor{
         display: none!important;
     }
@@ -217,4 +223,19 @@ li{
     50%{
         left: 50%;
     }
+}
+
+/* NAVBAR */
+
+.navbar{
+    display: flex;
+    width: 90vw;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+.navbar-nav{
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
 }
