@@ -4,7 +4,7 @@
     --blue: #19a1ad;
     --blueTransparency: #19a1ad70;
     --darkBlue: #1D2F62;
-    --darkBlueTransparency: #1D2F6270;
+    --darkBlueTransparency: #1D2F6240;
 }
 
 html{
@@ -64,7 +64,7 @@ body{
     transition:transform 2s;
 }
 
-.profile_picture:hover{
+.profile_picture:hover, .profile_picture:active{
     transform:rotate(360deg);
 }
 
@@ -84,7 +84,7 @@ body{
     position: relative;
     padding: 15px;
     padding-right: 25px;
-    border-radius: 25px;
+    border-radius: 10px;
 
     width: 25vw;
     height: 400px;
