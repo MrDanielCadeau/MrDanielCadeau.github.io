@@ -20,8 +20,8 @@ class Window{
     }
 
     sizeWindow(){
-        this.element.style.width = this.width + 'px'
-        this.element.style.height = this.height + 'px'
+        this.element.style.minWidth = this.width + 'px'
+        this.element.style.minHeight = this.height + 'px'
     }
 
     disposeWindow(){
