@@ -10,74 +10,63 @@
     <title>Porfolio by Daniel Cadeau</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-                <p> Hello World /</p>
-                <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.linkedin.com/in/daniel-cadeau-dev/">LinkedIn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://twitter.com/CadeauDaniel">Twitter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="https://github.com/MrDanielCadeau">Github</a>
-                        </li>
-                </ul>
-          </nav>
-    </header>
+    <div class="windows">
 
-    <h1>Maquettes réalisées :</h1> 
-    <div id="designs">
-        <div class="design link">
-            <h2>Profile Card Component</h2>
+        <div class="window" data-width="400" data-height="400" data-position="50/150">
+            <h3>Profile Card Component</h3>
             <figure>
                 <figcaption>(Front End Mentor)</figcaption>
                 <img src="./assets/imgs/profile_card.png" alt="preview profile card component design" class="preview" />
             </figure>
-            <a href="https://mrdanielcadeau.github.io/Profile-card-component/">Consulter la maquette <i class="fas fa-long-arrow-alt-right"></i></a>
+            <a href="https://mrdanielcadeau.github.io/Profile-card-component/" class="link">Consulter la maquette <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
-        <div class="design link">
-            <h2>Testimonials Grid Section</h2>
+
+        <div class="window" data-width="400" data-height="400" data-position="100/600">
+            <h3>Testimonials Grid Section</h3>
             <figure>
                 <figcaption>(Front End Mentor)</figcaption>
                 <img src="./assets/imgs/grid_section.png" alt="preview Testimonials Grid Section" class="preview" />
             </figure>
-            <a href="https://mrdanielcadeau.github.io/Testimonials-grid-section/">Consulter la maquette <i class="fas fa-long-arrow-alt-right"></i></a>
+            <a href="https://mrdanielcadeau.github.io/Testimonials-grid-section/" class="link">Consulter la maquette <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
-    </div>
 
-    <h1>Autres projets :</h1>
-    <div id="others">
-        <div class="other link">
-            <h2>Custom Localhost</h2>
+        <div class="window" data-width="400" data-height="500" data-position="550/200">
+            <h3>Custom Localhost</h3>
             <figure>
                 <figcaption class="aboutProject">Gestionnaire de dossiers/fichiers.<br>Projet en PHP/JS ayant pour but de remplacer l'interface classique du Localhost sur une installation LAMP, XAMP, MAMP etc.</figcaption>
                 <img src="./assets/imgs/custom_localhost.PNG" alt="preview custom Localhost project" class="preview" />
             </figure>
-            <a href="https://github.com/MrDanielCadeau/Custom-Localhost">Consulter le projet <i class="fas fa-long-arrow-alt-right"></i></a>
+            <a href="https://github.com/MrDanielCadeau/Custom-Localhost" class="link">Consulter le projet <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
-    </div>
 
-    <footer id="bio">
-        <div id="about">
-            <h1>By Daniel Cadeau</h1>
-            <h2>daniel1.cadeau@epitech.eu</h2>
-            <h2>06 26 40 83 02</h2>
+        <div class="window" data-width="100" data-height="300" data-position="1440/0">
             <ul id="socialMedia">
                 <li><a href="https://www.linkedin.com/in/daniel-cadeau-dev/"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="https://twitter.com/CadeauDaniel"><i class="fab fa-twitter-square"></i></a></li>
                 <li><a href="https://github.com/MrDanielCadeau"><i class="fab fa-github-square"></i></a></li>
+                <li><a href="https://codepen.io/mrdanielcad"><i class="fab fa-codepen"></i></a></li>
             </ul>
         </div>
-        <figure id="bio_figure">
-            <img src="assets/imgs/profile_picture.jpg" alt="profile picture" class="profile_picture" />
-            <figcaption>Développeur WEB en formation à la Web@cademie by Epitech</figcaption>
-        </figure>
-    </footer>
+        
+        <div class="window" data-width="400" data-height="100" data-position="1000/0">
+            <h1>Portfolio</h1>
+        </div>
 
-    <img src="assets/cursor.svg" alt="cursor image" id="cursor" />
-    <script src="./assets/js/click.js"></script>
-    <script src="./assets/js/cursor.js"></script>
+        <div class="window" data-width="400" data-height="300" data-position="1600/1200">
+            <h2>By Daniel Cadeau</h2>
+            <h3><a href="mailto:daniel1.cadeau@epitech.eu" class="mail">daniel1.cadeau@epitech.eu</a></h3>
+            <h3>06 26 40 83 02</h3>
+        </div>
+
+        <div class="window" data-width="350" data-height="175" data-position="1200/300">
+            <figure id="bio_figure">
+                <img src="assets/imgs/profile_picture.jpg" alt="profile picture" class="profile_picture" />
+                <figcaption>Développeur WEB en formation à la Web@cademie by Epitech</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <script src="./assets/js/Window.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
