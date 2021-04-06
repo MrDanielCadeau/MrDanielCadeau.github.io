@@ -20,8 +20,6 @@ windows.forEach(element => {
         let elX = ev.offsetX
         let elY = ev.offsetY
 
-        window.changePosition(ev.pageX, elX, ev.pageY, elY)
-
         document.addEventListener('mousemove', function (ev){
             window.changePosition(ev.pageX, elX, ev.pageY, elY)
         })
