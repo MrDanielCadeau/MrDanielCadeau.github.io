@@ -38,13 +38,14 @@ class Window{
         this.isGrabbed = false
     }
 
+    zindexIncrement(){
+        zindex++;
+        this.element.style.zIndex = zindex;
+    }
+
     changePosition(x, elX, y, elY){
         if(this.isGrabbed){
             this.element.style.transform = `translate3d(${x - elX}px, ${y - elY}px, 0)`
-
-            zindex++;
-            this.element.style.zIndex = zindex;
-        }
-            
+        } 
     }
 }
