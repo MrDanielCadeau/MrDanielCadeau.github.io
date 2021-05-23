@@ -179,6 +179,7 @@ body > .windows > .window:nth-child(1):not(.footer){
 }
 
 .menuWindow{
+    transform: translate3d(-10000px, 0px, 0px);
     background-color: white;
     z-index: 100000!important;
     width: 97.5vw;
