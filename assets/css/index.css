@@ -182,8 +182,8 @@ body > .windows > .window:nth-child(1):not(.footer){
     transform: translate3d(-10000px, 0px, 0px);
     background-color: white;
     z-index: 100000!important;
-    width: 97.5vw;
-    height: 94.5vh;
+    width: 0px;
+    height: 0px;
     cursor: auto;
 }
 
@@ -325,25 +325,37 @@ body > .windows > .window:nth-child(1):not(.footer){
 @-webkit-keyframes slideIn {
     0% {
       transform: translateX(-900px);
+      width: 97.5vw;
+      height: 94.5vh;
     }
     100% {
       transform: translateX(0);
+      width: 97.5vw;
+      height: 94.5vh;
     }
   }
   @-moz-keyframes slideIn {
     0% {
       transform: translateX(-900px);
+      width: 97.5vw;
+      height: 94.5vh;
     }
     100% {
       transform: translateX(0);
+      width: 97.5vw;
+      height: 94.5vh;
     }
   }
   @keyframes slideIn {
     0% {
       transform: translateX(-900px);
+      width: 97.5vw;
+      height: 94.5vh;
     }
     100% {
       transform: translateX(0);
+      width: 97.5vw;
+      height: 94.5vh;
     }
   }
 
@@ -356,6 +368,8 @@ body > .windows > .window:nth-child(1):not(.footer){
   @-webkit-keyframes slideOut {
     0% {
       transform: translateX(0);
+      width: 97.5vw;
+      height: 94.5vh;
     }
     100% {
       transform: translateX(-10000px);
@@ -364,6 +378,8 @@ body > .windows > .window:nth-child(1):not(.footer){
   @-moz-keyframes slideOut {
     0% {
       transform: translateX(0);
+      width: 97.5vw;
+      height: 94.5vh;
     }
     100% {
       transform: translateX(-10000px);
@@ -372,6 +388,8 @@ body > .windows > .window:nth-child(1):not(.footer){
   @keyframes slideOut {
     0% {
       transform: translateX(0);
+      width: 97.5vw;
+      height: 94.5vh;
     }
     100% {
       transform: translateX(-10000px);
@@ -434,6 +452,8 @@ body > .windows > .window:nth-child(1):not(.footer){
     }
 
     .menuWindow {
+        width: 0px;
+        height: 0px;
         height: 0px!important;
         left: -1000px;
         z-index: 1!important;
@@ -441,6 +461,8 @@ body > .windows > .window:nth-child(1):not(.footer){
 
     .show{
         margin-top: 15px;
+        width: 96vw!important;
+        height: auto;
         left: auto;
         height: 75vh!important;
     }
