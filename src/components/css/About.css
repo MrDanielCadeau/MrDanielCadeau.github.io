@@ -1,0 +1,91 @@
+.parts{
+    display: flex;
+    justify-content: space-between;
+}
+.part1{
+    height: 75vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.part2{
+    height: fit-content;
+    text-align: center;
+}
+.aboutBottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+.skills span{
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.8em;
+    display:list-item;
+    list-style-position: outside;
+    list-style-type: square;
+}
+.profilePicture{
+    filter: grayscale(50%);
+    border: solid 1px var(--textColor);
+    width: auto;
+    height: 20vh;
+    float: left;
+    margin-right: 25px;
+}
+.aboutMe{
+    margin-right: 20px;
+    border-bottom: 2px solid var(--textColor);
+}
+.aboutMe p{
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+.study{
+    min-width: 300px;
+}
+.study p{
+    margin-left: 25px;
+    display:list-item;
+    list-style-position: outside;
+    list-style-type: square;
+    text-align: left;
+    line-height: 1.4;
+    font-size: 1.5em;
+}
+.date{
+    font-style: italic;
+    color: var(--textColorHover);
+}
+.borderStudy{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 2px;
+    background-color: var(--textColor);
+}
+.alternance{
+    text-align: left;
+}
+.alternance h4{
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.alternance p{
+    text-align: center;
+    font-size: 16px;
+}
+.frontPartSkills, .backPartSkills{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
