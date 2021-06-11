@@ -1,3 +1,15 @@
+# PORTFOLIO by DANIEL CADEAU
+
+Welcome to this project. This GITHUB repository is my online portfolio. That's a simple interface, no DB, no BACK-END part, but there is lists of all my project and of course there is a lot of back oriented projects.
+
+I hope you'll enjoy to navigate on this portfolio. Have a nice day !
+
+//
+
+Bienvenue sur ce projet, ce repository GITHUB est dédié à mon portfolio. Il est ici question d'un site très simple, sans BDD, framework etc, qui me permet justement de référencer des projets plus riches avec des liens renvoyant vers ceux-ci. Au cours de la formation nous aurons à développer un site e-commerce qui sera ainsi répertorier dans mon portfolio par exemple.
+
+Je vous laisse découvrir tout ça et vous souhaite une agréable navigation !
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

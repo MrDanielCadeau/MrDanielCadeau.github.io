@@ -75,7 +75,7 @@
     border: solid 0.5px var(--textColor);
 }
 .prevCV:hover{
-    transform: scale(1.5);
+    transform: scale(2);
     cursor: pointer;
     z-index: 1000;
 }

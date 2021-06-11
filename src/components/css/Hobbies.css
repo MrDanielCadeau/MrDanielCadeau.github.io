@@ -32,8 +32,6 @@
     margin-top: 25px;
 }
 .favoritesBooks img{
-    transform: rotateY(45deg);
-    transform: rotate(5deg);
     width: 95px;
     height: 25vh;
     filter: grayscale(100%);

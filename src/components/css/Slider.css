@@ -8,7 +8,7 @@
     width: fit-content;
     height: 60vh;
 }
-.slide figure{
+.slide figure {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

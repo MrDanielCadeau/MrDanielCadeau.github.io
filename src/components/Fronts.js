@@ -1,25 +1,15 @@
 import React, { useState, useEffect } from 'react'
 
+import fronts from './data/fronts'
 import './css/Slider.css'
 
-import profile_card from './img/profile_card.png'
-import grid_section from './img/grid_section.png'
-
-function getSlides(){
-    const slides = {
-        profile_card: {img: profile_card, description: 'Carte de visite en ligne, Profile card component de la plateforme Front-End Mentor', platform: 'frontendmentor.io', github: 'https://github.com/MrDanielCadeau/Profile-card-component', link: 'https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ'},
-        grid_section: {img: grid_section, description: 'Testimonials grid section - challenge de la plateforme Front-End Mentor', platform: 'frontendmentor.io', github: 'https://github.com/MrDanielCadeau/Testimonials-grid-section', link: 'https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7'}
-    }
-    return slides
-}
-
 export default function Fronts() {
-    const slides = getSlides()
+
     const first = 1
-    const last = 2
+    const last = Object.keys(fronts).length
 
     const [currentSlide, setCurrentSlide] = useState(1)
-    const [slide, setSlide] = useState(slides.profile_card)
+    const [slide, setSlide] = useState([])
     const nextSlide = () => {
         let nextSlide = currentSlide + 1
         if(nextSlide <= last){
@@ -38,17 +28,10 @@ export default function Fronts() {
     }
 
     useEffect(() =>{
-        const slides = getSlides()
-        switch (currentSlide) {
-          case 1:
-            setSlide(slides.profile_card)
-            break
-          case 2:
-            setSlide(slides.grid_section)
-            break
-          default:
-            setSlide(slides.profile_card)
-            break
+        for (const [key, front] of Object.entries(fronts)){
+            if(front.id === currentSlide){
+                setSlide(front)
+            }
         }
       }, [currentSlide])
 
