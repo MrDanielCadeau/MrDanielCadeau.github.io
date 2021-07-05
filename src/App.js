@@ -5,7 +5,6 @@ import { Link } from "react-scroll";
 import About from './components/About'
 import Projects from './components/Projects'
 import Fronts from './components/Fronts'
-import Hobbies from './components/Hobbies'
 import Contact from './components/Contact'
 
 function App() {
@@ -77,16 +76,6 @@ function App() {
                 duration={500}
             >04. Mes maquettes</Link>
           </li>
-          <li>
-            <Link
-                activeClass="active"
-                to="hobbies"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-            >05. Hobbies</Link>
-          </li>
         </ul>
       </nav>
       <div id="pages">
@@ -113,12 +102,6 @@ function App() {
             subtitle='test'
             dark={true}
             id="fronts"
-        />
-        <Hobbies
-            title="Hobbies"
-            subtitle='test'
-            dark={false}
-            id="hobbies"
         />
         <p className="copyright">Copyright 2021 - Développé avec REACT</p>
       </div>
