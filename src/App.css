@@ -112,7 +112,7 @@ p, a, label, input, div, textarea, button {
   border-left: var(--textColor) solid 0.5px;
   border-bottom: var(--textColor)  solid 0.5px;
   width: fit-content;
-  height: 250px;
+  height: 225px;
   z-index: 1000;
   background-color: var(--bg);
 }
@@ -177,6 +177,8 @@ nav ul li a{
   opacity: 1;
 }
 .copyright{
+  background-color: var(--bg);
+  padding: 5px;
   position: fixed;
   bottom: 0%;
   right: 5%;
@@ -342,10 +344,14 @@ nav ul li a{
   /* ABOUT ME */
   .part1{
     justify-content: space-around;
+    height: fit-content!important;
   }
   .aboutMe{
     max-height: 50vh;
     overflow: scroll!important;
+  }
+  .divAnimation{
+    display: none;
   }
   /* CONTACT */
   .contactContainer{

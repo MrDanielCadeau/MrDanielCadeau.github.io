@@ -16,7 +16,8 @@ export default function About() {
                         <img className="profilePicture" src={profile} alt="me" />
                         {info.welcome_text}
                     </div>
-                    {info.alternance}
+                    {/* {info.alternance} */}
+                    {info.animation}
                 </div>
                 <div className="part2">
                     {info.study}

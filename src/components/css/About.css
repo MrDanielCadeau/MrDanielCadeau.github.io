@@ -25,7 +25,13 @@
     justify-content: space-around;
     margin-top: 25px;
 }
-.skills span{
+.skills_title{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.skills span:not(.skills_title){
+    max-width: 225px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 1.8em;
@@ -88,4 +94,32 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+.pAnimation {
+    border-right: solid 3px var(--textColorHover);
+    white-space: nowrap;
+    overflow: hidden; 
+    font-size: 11.5em;
+    color: var(--textColor);
+}
+.pAnimation {
+    animation: animated-text 2s steps(30,end) 1s 1 normal both,
+    animated-cursor 1.5s steps(30,end) infinite;
+}
+@keyframes animated-text{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+/* cursor animations */
+@keyframes animated-cursor{
+    from{
+        border-right-color: var(--textColorHover);
+    }
+    to{
+        border-right-color: transparent;
+    }
 }
