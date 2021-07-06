@@ -8,7 +8,7 @@ const info = {
             Bonjour très chers visiteurs, je suis très heureux de vous accueillir ici.
             <br/>
             <br/>
-            Je m'appelle Daniel Cadeau, 21 ans, développeur WEB <span className="bold">LARAVEL FULL-STACK</span> passionné depuis très jeune par le monde du code. Et si j'ai d'abord délaissé cette passion pour suivre une voie en rapport avec le monde des lettres, j'ai fini par retrouver mon sentier et voilà bientôt plus de deux ans que je me forme pleinement au code. D'abord en autodidacte, puis en intégrant la formation que je suis actuellement à la Web@cadémie by Epitech.
+            Je m'appelle Daniel Cadeau, 21 ans, développeur WEB <span className="bold">LARAVEL FULL-STACK</span>, passionné depuis très jeune par le monde du code. Et si j'ai d'abord délaissé cette passion pour suivre une voie en rapport avec le monde des lettres, j'ai fini par retrouver mon sentier et voilà bientôt plus de deux ans que je me forme pleinement au code. D'abord en autodidacte, puis en intégrant la formation que je suis actuellement à la Web@cadémie by Epitech.
             <br/>
             <br/>
             Je ne suis plus à la recherche d'une alternance, néanmoins je vous remercie grandement de l'intérêt porté à mon portfolio.
@@ -57,7 +57,7 @@ const info = {
                 <span className="skills_title">Frameworks / Systems :</span>
                 <span>LARAVEL</span>
                 <span>VUE.JS</span>
-                <span>CMS (WordPress)</span>
+                <span>WordPress</span>
             </div>
         </div>
     ),
