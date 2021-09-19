@@ -34,6 +34,7 @@ export default {
   --bg-color: white;
   --primary-color: #94b896;
   --secondary-color: rgb(57, 77, 57);
+  --third-color: gray;
   --text-color: var(--secondary-color);
   --text-color-alt: white;
   --sidebar-bg: var(--primary-color); 

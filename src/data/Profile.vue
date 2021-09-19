@@ -28,7 +28,7 @@
                 title: 'School Time',
                 years: 'until 2018',
                 where: 'France & Russia',
-                diploma: 'Diploma of secondary education in Russia',
+                diploma: 'Secondary Education in Russia',
             }
         },
         skills: {

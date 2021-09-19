@@ -10,11 +10,11 @@
         <ul class="studies">
           <li><h3>Studies</h3></li>
           <li v-for="study in this.profile.studies" :key="study.years" class="study">
-            <h4>{{study.title}}</h4>
             <div class="studyInfo">
-              {{study.years}}
-              {{study.where}}
-              {{study.diploma}}
+              <p class="studyDate">{{study.years}}</p>
+              <h4>{{study.title}}</h4>
+              <p class="studyWhere"><i class="fas fa-map-marker-alt"></i> {{study.where}}</p>
+              <p class="studyDiploma"><i class="fas fa-certificate"></i> {{study.diploma}}</p>
             </div>
           </li>
         </ul>
@@ -97,9 +97,19 @@ h3{
 }
 .study{
   border-top: 1px solid var(--primary-color);
-  padding: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  line-height: 1.5em;
   width: 50%;
   text-align: left;
+}
+.studyInfo > h4{
+  font-weight: bold;
+}
+.studyDate{
+  text-align: center;
+  color: var(--third-color);
+  font-style: italic;
 }
 .skills{
   margin-top: 10px;
