@@ -1,0 +1,113 @@
+<template>
+  <div id="app">
+    <Navbar v-bind:profile="profile" />
+    <Home v-bind:profile="profile" />
+    <Footer v-bind:profile="profile" />
+  </div>
+</template>
+
+<script>
+import Navbar from './components/Navbar.vue'
+import Home from './components/Home.vue'
+import Footer from './components/Footer.vue'
+// DATA
+import Profile from './data/Profile.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Navbar,
+    Home,
+    Footer,
+  },
+  data() {
+    return {
+      profile: Profile,
+    };
+  },
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --bg-color: white;
+  --primary-color: #94b896;
+  --secondary-color: rgb(57, 77, 57);
+  --text-color: var(--secondary-color);
+  --text-color-alt: white;
+  --sidebar-bg: var(--primary-color); 
+  --footer-text-color: rgb(94, 94, 94);
+}
+#app {
+  text-align: center;
+  background-color: var(--bg-color);
+}
+/* RESET CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 1em;
+	vertical-align: baseline;
+  font-weight: 400;
+  font-family: 'Prompt', sans-serif;
+  color: var(--text-color);
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+  outline: none;
+}
+a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+input, textarea{
+  font-family: 'Prompt', sans-serif;
+  color: var(--text-color);
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* KEYFRAMES */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+</style>

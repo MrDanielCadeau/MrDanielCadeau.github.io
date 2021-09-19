@@ -1,0 +1,139 @@
+<template>
+    <div id="Navbar">
+        <div>
+            <a href="/"><h1>{{ this.profile.fullname }}'s Portfolio</h1></a>
+        </div>
+        <nav class="links">
+            <ul>
+                <li v-for="link in this.profile.links" :key="link.title">
+                    <a :href="link.url">{{link.title}}</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="projects">
+            <ul class="dropdown_ul">
+                <li class="dropdown">
+                    <a href="/projects">Projects <i class="fas fa-sort-down"></i></a>
+                    <ul class="drop">
+                        <li v-for="project in this.profile.projects" :key="project.title">
+                            <a :href="project.url">{{project.title}}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</template>
+
+<script>
+    export default {
+        props: {
+            profile: Object,
+        },
+        mounted() {
+            console.log('Navbar is loaded.')
+        }
+    }
+</script>
+
+<style scoped>
+#Navbar{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: var(--bg-color);
+    box-shadow: 0 0px 9px 4px rgba(0, 0, 0, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+h1{
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--text-color);
+    max-width: 300px;
+}
+.links > ul {
+    display: flex;
+}
+.links > ul > li a{
+    padding: 5px;
+    margin-left: 5px;
+}
+.links > ul > li a:hover{
+  color: var(--text-color-alt);
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+.projects .dropdown_ul {
+  float: right;
+  margin-right: 30px;
+  position: relative;
+}
+.projects .dropdown_ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+  margin: 25px;
+}
+.projects .dropdown_ul li > a {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 30px;
+  height: 30px;
+  padding: 5px;
+
+}
+.projects .dropdown_ul li > a:hover {
+  color: var(--text-color-alt);
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+.projects .dropdown_ul li > a[class^=trigger-] {
+  padding-right: 40px;
+}
+.projects .dropdown_ul li ul {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+.projects .dropdown_ul li ul > li {
+    text-align: left;
+  clear: both;
+  list-style: none;
+  display: block;
+  padding: 0 10px;
+  margin: 0;
+  width: 200px;
+}
+.projects .dropdown_ul li ul > li:hover {
+  background: var(--primary-color);
+}
+.projects .dropdown_ul li ul > li:hover > a {
+  background: var(--primary-color);
+  color: var(--text-color-alt);
+}
+.projects .dropdown_ul li:hover > .drop {
+  display: block;
+  animation: fadeInRight 0.3s ease;
+  -webkit-animation: fadeInRight 0.3s ease;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
