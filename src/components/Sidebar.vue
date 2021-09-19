@@ -225,4 +225,14 @@
 .smoothButtons ul li span {
     --n: 2;
 } 
+@media (max-width: 780px) {
+  .sidebar{
+      width: 50vw;
+  }
+}
+@media (max-width: 480px) {
+  .sidebar{
+      width: 100vw;
+  }
+}
 </style>

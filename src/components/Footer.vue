@@ -57,4 +57,13 @@
 .footer-text{
     color: var(--footer-text-color);
 }
+@media (max-width: 780px) {
+  footer .container{
+      flex-direction: column-reverse;
+  }
+  .contactButton{
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+}
 </style>

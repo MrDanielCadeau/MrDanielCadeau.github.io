@@ -132,4 +132,36 @@ h3{
   width: 1px;
   background-color: var(--primary-color);
 }
+@media (max-width: 780px) {
+  .home{
+    flex-direction: column;
+  }
+  .home > div{
+    width: 90%;
+  }
+  .home > .rightPart{
+    margin-top: 50px;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .home{
+    margin-top: 25px;
+  }
+  .profileCard{
+    padding: 2px;
+    border: none;
+  }
+  .home > div{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .home > .rightPart > ul {
+    width: 100%;
+    border: none;
+  }
+  .study{
+    width: 80%;
+  }
+}
 </style>
