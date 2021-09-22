@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <Navbar v-bind:profile="profile" />
+    <Navbar v-bind:profile="profile" v-bind:projects="projects" />
     <Home v-bind:profile="profile" />
     <Footer v-bind:profile="profile" />
   </div>
 </template>
 
 <script>
+//PAGES
+import Home from './pages/Home.vue'
+// COMPONENTS
 import Navbar from './components/Navbar.vue'
-import Home from './components/Home.vue'
 import Footer from './components/Footer.vue'
 // DATA
 import Profile from './data/Profile.vue'
+import Projects from './data/Projects.vue'
 
 export default {
   name: 'App',
@@ -23,7 +26,8 @@ export default {
   data() {
     return {
       profile: Profile,
-    };
+      projects: Projects,
+    }
   },
 }
 </script>
