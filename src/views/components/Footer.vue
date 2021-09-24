@@ -33,37 +33,5 @@
     }
 </script>
 
-<style scoped>
-.footer .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 75px;
-}
-.contactButton{
-    background-color: var(--bg-color);
-    border: 1px solid var(--primary-color);
-    color: var(--text-color);
-    font-size: 1.4em;
-    padding: 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 25px;
-}
-.contactButton:hover{
-    background-color: var(--primary-color);
-    color: var(--text-color-alt);
-}
-.footer-text{
-    color: var(--footer-text-color);
-}
-@media (max-width: 780px) {
-  footer .container{
-      flex-direction: column-reverse;
-  }
-  .contactButton{
-      margin-left: 0;
-      margin-bottom: 10px;
-  }
-}
+<style scoped src="@/assets/css/Footer.css">
 </style>
