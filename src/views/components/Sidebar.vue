@@ -66,5 +66,5 @@
     }
 </script>
 
-<style scoped src="@/assets/css/components/Sidebar.css">
+<style scoped src="@/assets/css/Sidebar.css">
 </style>

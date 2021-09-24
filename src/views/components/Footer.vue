@@ -33,5 +33,5 @@
     }
 </script>
 
-<style scoped src="@/assets/css/components/Footer.css">
+<style scoped src="@/assets/css/Footer.css">
 </style>

@@ -29,6 +29,9 @@
     line-height: 1.7em;
     text-align: left;
   }
+  .studies{
+    padding-bottom: 15px;
+  }
   .studies, .skills{
     width: 75%;
     display: flex;
@@ -47,7 +50,7 @@
     padding-top: 3px;
     padding-bottom: 3px;
     line-height: 1.5em;
-    width: 50%;
+    max-width: 75%;
     text-align: left;
   }
   .studyInfo > h4{

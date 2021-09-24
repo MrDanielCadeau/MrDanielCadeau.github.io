@@ -15,8 +15,9 @@
                 <li class="dropdown">
                     <a href="/projects">Projects <i class="fas fa-sort-down"></i></a>
                     <ul class="drop">
-                        <li v-for="project in this.projects.data" :key="project.title">
-                            <a :href="project.url">{{project.title}}</a>
+                        <li v-for="project in this.projectsData.data" :key="project.title">
+                            <a :href="project.url" v-if="project.url">{{project.title}}</a>
+                            <a class="deactivate" v-else>{{project.title}}</a>
                         </li>
                     </ul>
                 </li>
@@ -29,7 +30,7 @@
     export default {
         props: {
             profile: Object,
-            projects: Object,
+            projectsData: Object,
         },
         mounted() {
             console.log('Navbar is loaded.')
@@ -37,5 +38,5 @@
     }
 </script>
 
-<style scoped src="@/assets/css/components/Navbar.css">
+<style scoped src="@/assets/css/Navbar.css">
 </style>
