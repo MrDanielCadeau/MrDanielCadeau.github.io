@@ -1,8 +1,12 @@
 <template>
     <div class="sidebar" >
-        <div class="sidebarTop">
-            <button v-on:click="clickShow(false)" class="sidebarClose"><i class="far fa-window-close"></i></button>
-            <h2 class="contactFormTitle">Contact</h2>
+        <div class="sidebarBottom smoothButtons">
+            <ul>
+                <li v-on:click="clickShow(false)">
+                    <button class="sidebarClose">CLOSE</button>
+                    <span></span>
+                </li>
+            </ul>
         </div>
         <div class="coordinateCard">
             <a :href="`mailto:${this.profile.email}`"><i class="fas fa-at"></i> {{this.profile.email}}</a>
@@ -15,19 +19,19 @@
             <input id="user_email" type="email" name="user_email" />
             <label for="message">Your message to me</label>
             <textarea id="message" name="message"></textarea>
-            <button><i class="fab fa-telegram-plane"></i></button>
+            <div class="sidebarBottom smoothButtons">
+                <ul>
+                    <li>
+                        <button class="sidebarClose">SEND</button>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
         </form>
         <div v-else class="contactForm">
             <h3>Thank you for your message, I will try to answer it quickly!</h3>
         </div>
-        <div class="sidebarBottom smoothButtons">
-            <ul>
-                <li v-on:click="clickShow(false)">
-                    <button class="sidebarClose">CLOSE</button>
-                    <span></span>
-                </li>
-            </ul>
-        </div>
+        
     </div>
 </template>
 

@@ -85,3 +85,11 @@ input, textarea{
         opacity: 1;
     }
 }
+@keyframes slideTop{
+  0% {
+    transform: translateY(-900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

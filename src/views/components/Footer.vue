@@ -3,7 +3,7 @@
       <div class="container">
         <Sidebar :clickShow="clickShow" v-bind:profile="this.profile" v-if="this.show"/>
         <span class="footer-text">Copyright 2021 - Hoping to see you again</span>
-        <button class="contactButton" v-on:click="clickShow(true)">Contact me</button>
+        <button class="contactButton" v-on:click="clickShow(!show)">Contact me</button>
       </div>
     </footer>
 </template>

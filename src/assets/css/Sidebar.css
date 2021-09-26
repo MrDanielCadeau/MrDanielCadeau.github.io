@@ -1,5 +1,5 @@
 .sidebar{
-    background-color: var(--sidebar-bg);
+    background-color: var(--bg-color);
     z-index: 1000000;
     position: fixed;
     top: 0;
@@ -9,51 +9,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: -5px 0px 10px var(--sidebar-bg);
-    animation: fadeIn 1.5s forwards;
-}
-.sidebar > .sidebarTop{
-    margin-top: 15px;
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-}
-.sidebar > .sidebarTop > .contactFormTitle{
-    font-size: 2.5em;
-    font-weight: 500;
-    color: var(--text-color-alt);
-}
-.sidebar > .sidebarTop > .sidebarClose{
-    border: none;
-    background-color: transparent;
-    font-size: 2.5em;
-    font-weight: 500;
-    cursor: pointer;
-}
-.sidebar > .sidebarTop > .sidebarClose > i{
-    color: var(--text-color-alt);
-}
-.sidebar > .sidebarTop > .sidebarClose:hover > i{
-    color: var(--text-color);
-}
-.sidebar > .sidebarTop > .sidebarClose:active > i{
-    opacity: 0.7;
+    border-left: 1px solid var(--primary-color);
+    animation: fadeIn 0.75s forwards;
 }
 /* coordinateCard */
 .sidebar > .coordinateCard{
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-bottom: 25px;
 }
 .sidebar > .coordinateCard > a{
-    margin-top: 15px;
+    padding: 10px;
     text-align: left;
-    font-size: 1.3em;
-    color: var(--text-color-alt);
+    font-size: 1.1em;
+    color: var(--text-color);
 }
 .sidebar > .coordinateCard > a:hover{
-    color: var(--secondary-color);
+    color: var(--text-color-alt);
+    background: var(--primary-color);
+    border-radius: 4px;
 }
 /* form */
 .sidebar > .contactForm{
@@ -71,41 +45,25 @@
 }
 .sidebar > .contactForm > label{
     text-align: left;
-    font-size: 1.2em;
-    color: var(--text-color-alt);
+    font-size: 0.9em;
+    color: var(--text-color);
     padding-top: 15px;
     padding-bottom: 5px;
 }
 .sidebar > .contactForm > input[type="text"], .sidebar > .contactForm > input[type="email"]{
     border: none;
-    font-size: 1.3em;
+    font-size: 0.9em;
     padding: 10px 0px;
     text-indent: 15px;
+    border: 1px solid var(--primary-color);
 }
 .sidebar > .contactForm > textarea{
     resize: none;
     border: none;
     height: 40%;
-    font-size: 1.3em;
-    text-indent: 5px;
+    font-size: 0.9em;
     padding-top: 5px;
-}
-.sidebar > .contactForm > button{
-    margin-top: 10px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 4em;
-    border-bottom: 0.5px solid var(--bg-color);
-}
-.sidebar > .contactForm > button > i{
-    color: var(--text-color-alt);
-}
-.sidebar > .contactForm > button:hover > i{
-    color: var(--secondary-color);
-}
-.sidebar > .contactForm > button:active > i{
-    opacity: 0.7;
+    border: 1px solid var(--primary-color);
 }
 /* smoothButtons at bottom */
 .sidebarBottom ul{
@@ -123,7 +81,6 @@
     z-index: 1;
     transition: 0.2s;
     cursor: pointer;
-    box-shadow: -5px 0px 5px var(--bg-color);
 }
 .smoothButtons ul li button {
     background-color: transparent;
@@ -131,6 +88,8 @@
     text-transform: uppercase;
     cursor: pointer;
     font-size: 1.5em;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--secondary-color);
 }
 .smoothButtons ul li span {
     position: absolute;
@@ -149,6 +108,7 @@
 }
 .smoothButtons ul li:hover button {
     color: var(--text-color-alt);
+    border-bottom: 2px solid var(--text-color-alt);
 }
 .smoothButtons ul li:hover span {
     transform: translateY(0) scale(2);

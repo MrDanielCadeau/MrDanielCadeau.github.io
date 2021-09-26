@@ -2,13 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 75px;
+    min-height: 50px;
 }
 .contactButton{
     background-color: var(--bg-color);
     border: 1px solid var(--primary-color);
     color: var(--text-color);
-    font-size: 1.4em;
+    font-size: 1em;
     padding: 5px;
     border-radius: 4px;
     cursor: pointer;
@@ -20,6 +20,7 @@
 }
 .footer-text{
     color: var(--footer-text-color);
+    font-size: 0.7em;
 }
 @media (max-width: 780px) {
   footer .container{
