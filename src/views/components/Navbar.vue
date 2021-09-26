@@ -6,7 +6,7 @@
         <nav class="links">
             <ul>
                 <li v-for="link in this.profile.links" :key="link.title">
-                    <a :href="link.url">{{link.title}}</a>
+                    <a :href="link.url" target="_blank" rel="noopener noreferrer">{{link.title}}</a>
                 </li>
             </ul>
         </nav>
@@ -16,7 +16,7 @@
                     <a href="/projects">Projects <i class="fas fa-sort-down"></i></a>
                     <ul class="drop">
                         <li v-for="project in this.projectsData.data" :key="project.title">
-                            <a :href="project.url" v-if="project.url">{{project.title}}</a>
+                            <a :href="project.url" v-if="project.url" target="_blank" rel="noopener noreferrer">{{project.title}}</a>
                             <a class="deactivate" v-else>{{project.title}}</a>
                         </li>
                     </ul>
