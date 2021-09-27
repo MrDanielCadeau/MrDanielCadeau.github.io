@@ -9,6 +9,9 @@
   --sidebar-bg: var(--primary-color); 
   --footer-text-color: rgb(94, 94, 94);
 }
+.primary{
+  color: var(--primary-color);
+}
 #app {
   text-align: center;
   background-color: var(--bg-color);
@@ -62,7 +65,7 @@ table {
 *{
   outline: none;
 }
-a{
+a, button{
   text-decoration: none;
   color: var(--text-color);
 }
@@ -70,6 +73,20 @@ input, textarea{
   font-family: 'Prompt', sans-serif;
   color: var(--text-color);
 }
+/* SCROLLBAR */
+*::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  outline: 1px solid var(--secondary-color);
+}
+/*  */
 .deactivate{
   pointer-events: none;
   cursor: initial;

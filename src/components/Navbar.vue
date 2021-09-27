@@ -13,7 +13,7 @@
         <nav class="projects">
             <ul class="dropdown_ul">
                 <li class="dropdown">
-                    <a href="/projects">Projects <i class="fas fa-sort-down"></i></a>
+                    <a href="#projects">Projects <i class="fas fa-sort-down"></i></a>
                     <ul class="drop">
                         <li v-for="project in this.projectsData.data" :key="project.title">
                             <a :href="project.url" v-if="project.url" target="_blank" rel="noopener noreferrer">{{project.title}}</a>

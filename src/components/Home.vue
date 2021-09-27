@@ -41,6 +41,7 @@
 </template>
 <script>
     export default {
+        name: 'home',
         props: {
             profile: Object,
         },

@@ -1,5 +1,122 @@
 .projects{
-    margin-top: 115px;
+    margin-top: 75px;
+    margin-bottom: 75px;
     text-align: center;
-    min-height: 70vh;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: slideTop 0.75s forwards;
+}
+.projects > button,
+.projects > .project_card > .maxWidth720 > button{
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 25px;
+    min-width: 75px;
+}
+.projects > button:hover,
+.projects > .project_card > .maxWidth720 > button:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color-alt);
+}
+.projects > .project_card > .maxWidth720{
+    display: none;
+}
+.project_card{
+    background-color: var(--secondary-color);
+    height: 99vh;
+    width: 70vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    box-shadow: 10px 10px 5px var(--primary-color);
+}
+.project_card > .project_title{
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--text-color-alt);
+}
+.project_card > .project_url{
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--text-color-alt);
+}
+.project_card > a:hover{
+    color: var(--primary-color);
+}
+.project_card > .picture_container{
+    margin-top: 25px;
+    height: 50vh;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+}
+.project_card > .picture_container > a > .project_picture, 
+.project_card > .picture_container > .project_picture {
+    width: 75%;
+}
+.project_card > .count {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: var(--primary-color);
+}
+.project_card > .project_desc{
+    font-size: 0.9em;
+    min-height: 122px;
+    margin-top: 10px;
+    text-align: left;
+    line-height: 25px;
+    width: 75%;
+    border: 0.5px solid var(--primary-color);
+    padding: 10px;
+    color: var(--text-color-alt);
+}
+@media (max-width: 860px) {
+    .projects > button{
+        display: none;
+    }
+    .projects{
+        flex-direction: column;
+    }
+    .project_card{
+        margin: auto;
+        box-shadow: none;
+        position: relative;
+    }
+    .projects > .project_card > .maxWidth720{
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    .project_card > .project_title{
+        margin-top: 30px;
+        font-size: 1.5em;
+    }
+    .project_card > .project_url{
+        font-size: 0.8em;
+    }
+    .project_card > .project_desc{
+        font-size: 0.7em;
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .project_card > .count{
+        font-size: 0.7em;
+    }
+}
+@media (max-width: 325px) {
+    .projects{
+        display: none;
+    }
 }
