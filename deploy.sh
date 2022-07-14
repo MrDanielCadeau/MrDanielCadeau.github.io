@@ -7,7 +7,7 @@ npm run build
 cd dist
 git init
 git checkout -b prod
-echo CNAME > 'www.dcadeau.tech'
+echo 'www.dcadeau.tech' > CNAME 
 git add -A
 git commit -m 'deploy'
 # if you are deploying to https://<USERNAME>.github.io
