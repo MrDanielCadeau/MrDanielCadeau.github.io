@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "emailjs-com": "^3.2.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -35,10 +34,5 @@
       "parser": "babel-eslint"
     },
     "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }
