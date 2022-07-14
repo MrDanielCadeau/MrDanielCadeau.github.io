@@ -6,6 +6,8 @@ npm run build
 # navigate into the build output directory
 cd dist
 git init
+git checkout -b prod
+cat CNAME > 'www.dcadeau.tech'
 git add -A
 git commit -m 'deploy'
 # if you are deploying to https://<USERNAME>.github.io

@@ -23,6 +23,9 @@
                 </li>
             </ul>
         </nav>
+        <h2 class="update">
+            Old version - summer 2021 - update is coming soon
+        </h2>
     </div>
 </template>
 
