@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 git checkout development
-git delete prod
+git branch --delete prod
 git checkout -b prod
 git add -A
 git commit -m 'deploy'
