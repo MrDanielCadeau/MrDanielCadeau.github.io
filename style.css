@@ -96,6 +96,10 @@ header nav a.active-link div {
         padding-bottom: 8px;
         padding-top: 8px;
     }
+
+    header > nav, header > a {
+        padding: 0 16px;
+    }
 }
 
 /** 
