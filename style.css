@@ -1,0 +1,433 @@
+:root{
+    --orange: #FFA51F;
+    --pastel: #FFD79C;
+    --dark: #404040;
+    --light: #fff;
+    --grey: #989898;
+    --lightgrey: #eeeeee;
+    --text-color: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: unset;
+    list-style: none;
+}
+
+body, p, ul, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/** media query for mobile */
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        max-width: 100%;
+    }
+    main {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+/**
+    HEADER
+*/
+
+header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--light);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--lightgrey);
+}
+
+header > a {
+    padding: 0 64px;
+}
+
+header nav {
+    padding: 0 64px;
+}
+
+header nav a {
+    font-size: large;
+}
+
+header nav a:not(:last-child) {
+    margin-right: 16px;
+}
+
+header nav a.active-link {
+    position: relative;
+}
+
+header nav a.active-link div {
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    border-radius: 4px;
+    height: 3px;
+    width: 64px;
+    background-color: var(--orange);
+}
+
+/** mediq query for mobile */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
+}
+
+/** 
+    SECTIONS 
+*/
+
+/* ABOUT ME */
+#about-me {
+    position: relative;
+    height: 400px;
+    margin: 128px 64px 16px;
+}
+
+#about-me div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 500px;
+    margin-left: 500px;
+}
+
+#about-me figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    margin-right: auto;
+    width: 400px;
+    height: 100%;
+}
+
+#about-me figure img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    #about-me div {
+        margin-left: 250px;
+    }
+    #about-me figure {
+        width: 200px;
+    }
+}
+/* media query for mobile */
+@media screen and (max-width: 768px) {
+    #about-me {
+        height: auto;
+        margin: 144px 16px 16px;
+        width: fit-content;
+    }
+    #about-me h2 {
+        width: fit-content;
+    }
+    #about-me div {
+        margin-left: 0;
+        max-width: auto;
+    }
+
+    #about-me figure {
+        position: relative;
+        width: calc(100% - 32px);
+    }
+}
+
+/* SKILLS */
+#skills {
+    margin: 16px 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#skills > figure > figcaption {
+    display: flex;
+    justify-content: space-between;
+}
+
+#skills > div {
+    width: 100%;
+    height: fit-content;
+    display: none;
+}
+
+#skills > div > ul {
+    display: grid;
+    row-gap: 32px;
+}
+
+#skills > div > ul.hard-skills {
+    margin-left: 32px;
+}
+
+#skills > div > ul > li {
+    border-radius: 9999px;
+    width: fit-content;
+    padding: 8px 32px;
+    font-size: x-large;
+    text-align: center;
+    height: fit-content;
+}
+
+/** media query for mobile */
+@media screen and (max-width: 768px) {
+    #skills {
+        margin: 16px 16px;
+        grid-template-columns: 1fr;
+    }
+    #skills > figure {
+        display: none;
+    }
+    #skills > div {
+        display: block;
+    }
+    #skills > div > ul {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+    }
+    #skills > div > ul.hard-skills {
+        margin-left: 0;
+    }
+    #skills > div > ul.hard-skills li {
+        justify-self: end;
+    }
+}
+
+/* EXPERIENCE */
+#experience {
+    margin: 32px 64px;
+}
+
+#experience ul {
+    padding: 32px 64px;
+}
+
+#experience ul li.job::before {
+    position: absolute;
+    content: "\2022";  /* \2022 is the CSS Code/unicode for a bullet */
+    color: var(--orange); 
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1em;
+}
+
+#experience ul li.job div.details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+#experience ul li.job div.details a {
+    width: fit-content;
+    color: var(--grey);
+}
+
+#experience ul li.job div.content {
+    width: 60%;
+}
+
+/** mobile query */
+@media screen and (max-width: 768px) {
+    #experience {
+        margin: 32px 16px;
+    }
+    #experience ul li.job div.details {
+        flex-direction: column-reverse;
+    }
+    #experience ul li.job div.content {
+        width: 100%;
+    }
+}
+
+/**
+    FOOTER
+*/
+
+footer {
+    padding: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/** mobile query */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+    footer section {
+        width: 100%;
+    }
+    footer section:last-child {
+        margin-top: 32px;
+    }
+    footer * {
+        text-align: left!important;
+    }
+}
+
+/** 
+    CUSTOM CLASSES
+*/
+
+.mb-32 {
+    margin-bottom: 32px;
+}
+
+.active-link {
+    color: var(--text-color);
+}
+
+.not-active-link {
+    color: var(--grey);
+}
+
+.not-active-link:hover {
+    color: var(--text-color);
+}
+
+#resume-list {
+    display: flex;
+}
+
+#resume-list > li:not(:first-child) {
+    margin-left: 4px;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+}
+
+/** 
+    TEXT 
+*/
+.text-underline {
+    border-bottom: 1px solid var(--grey);
+}
+
+.text-small {
+    font-size: 0.9rem;
+}
+
+.text-large {
+    font-size: x-large;
+    font-weight: 500;
+    line-height: 2.5rem;
+}
+
+.text-extralarge {
+    font-size: xx-large;
+    line-height: 3rem;
+}
+
+.text-bold {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/** 
+    COLORS 
+*/
+
+.bg-pastel {
+    background-color: var(--pastel);
+}
+
+.text-pastel {
+    color: var(--pastel);
+}
+
+.bg-lightgrey {
+    background-color: var(--lightgrey);
+}
+
+.text-lightgrey {
+    color: var(--lightgrey);
+}
+
+.bg-grey {
+    background-color: var(--grey);
+}
+
+.text-grey {
+    color: var(--grey);
+}
+
+.bg-orange {
+    background-color: var(--orange);
+}
+
+.text-orange {
+    color: var(--orange);
+}
+
+.hover-orange:hover {
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.text-light {
+    color: var(--light);
+}
+
+.bg-dark {
+    background-color: var(--dark);
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.hover-black:hover {
+    color: black!important;
+    border-color: black;
+}
